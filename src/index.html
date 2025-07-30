@@ -1,8 +1,27 @@
-<b id="res">...</b>
+<!DOCTYPE html>
+<html lang="en">
 
-<script>
-(async function() {
-    const { time } = await( await fetch(`/api/HttpTrigger1`)).json();
-    document.querySelector('#res').textContent = time;
-}());
-</script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Vanilla JavaScript App</title>
+</head>
+
+<body>
+  <main>
+    <h1>Call API</h1>
+  </main>
+
+  <b id="res">...</b>
+
+  <script>
+  (async function() {
+      const { time } = await( await fetch(`/api/HttpTrigger1`)).json();
+      document.querySelector('#res').textContent = time;
+  }());
+  </script>
+
+</body>
+
+</html>

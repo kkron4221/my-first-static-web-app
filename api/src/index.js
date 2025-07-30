@@ -1,3 +1,9 @@
+const { app } = require('@azure/functions');
+
+app.setup({
+    enableHttpStream: true,
+});
+
 module.exports = async function (context) {
     context.res.json({
         time: get_time()
